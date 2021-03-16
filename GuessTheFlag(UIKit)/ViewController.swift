@@ -14,11 +14,18 @@ class ViewController: UIViewController {
     
     var countries = ["US", "Estonia", "France", "Russia", "Italy", "Germany", "Monaco", "Nigeria", "Poland", "Spain", "UK", "Ireland"]
     var score = 0
+    var highestScore: Int! {
+        didSet {
+            UserDefaults.standard.set(highestScore, forKey: "score")
+        }
+    }
     var correctAnswer = 0
     var questionsAsked = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        highestScore = UserDefaults.standard.integer(forKey: "score")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(scoreButtonTapped))
         
@@ -66,6 +73,12 @@ class ViewController: UIViewController {
         if questionsAsked == 10 {
             title = "Congratulations!"
             message = "Your final score is \(score)."
+            
+            if score > highestScore {
+                title = "Wow!"
+                message = "You achieved a new high score of \(score)"
+                highestScore = score
+            }
             
             let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Play again", style: .default, handler: {_ in

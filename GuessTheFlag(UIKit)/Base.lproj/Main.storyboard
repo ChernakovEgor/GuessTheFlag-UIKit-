@@ -17,21 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff2-l7-T28">
-                                <rect key="frame" x="107" y="171" width="200" height="100"/>
+                                <rect key="frame" x="107" y="108" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ff2-l7-T28" secondAttribute="height" multiplier="2:1" id="jTq-zu-u22"/>
+                                </constraints>
                                 <state key="normal" image="russia"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="19J-Qw-hyC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDe-2N-wDy">
-                                <rect key="frame" x="107" y="368" width="200" height="100"/>
+                                <rect key="frame" x="107" y="258" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xDe-2N-wDy" secondAttribute="height" multiplier="2:1" id="agh-q3-sha"/>
+                                </constraints>
                                 <state key="normal" image="estonia"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BfC-b2-hbN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGb-NP-Jec">
-                                <rect key="frame" x="107" y="556" width="200" height="100"/>
+                                <rect key="frame" x="107" y="408" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IGb-NP-Jec" secondAttribute="height" multiplier="2:1" id="Pqe-9q-Mlc"/>
+                                </constraints>
                                 <state key="normal" image="france"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2tn-BP-vpW"/>
@@ -42,10 +51,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IGb-NP-Jec" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1VM-Vy-MSa"/>
-                            <constraint firstItem="xDe-2N-wDy" firstAttribute="top" secondItem="Ff2-l7-T28" secondAttribute="bottom" constant="97" id="Kac-yN-0xf"/>
-                            <constraint firstItem="IGb-NP-Jec" firstAttribute="top" secondItem="xDe-2N-wDy" secondAttribute="bottom" constant="88" id="Rof-0l-sbY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IGb-NP-Jec" secondAttribute="bottom" constant="20" id="3A0-Rm-NqO"/>
+                            <constraint firstItem="xDe-2N-wDy" firstAttribute="height" secondItem="Ff2-l7-T28" secondAttribute="height" id="A6y-4Y-Q47"/>
+                            <constraint firstItem="IGb-NP-Jec" firstAttribute="height" secondItem="xDe-2N-wDy" secondAttribute="height" id="Fwu-0J-kmZ"/>
+                            <constraint firstItem="xDe-2N-wDy" firstAttribute="top" secondItem="Ff2-l7-T28" secondAttribute="bottom" constant="50" id="Kac-yN-0xf"/>
+                            <constraint firstItem="IGb-NP-Jec" firstAttribute="top" secondItem="xDe-2N-wDy" secondAttribute="bottom" constant="50" id="Rof-0l-sbY"/>
                             <constraint firstItem="xDe-2N-wDy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="S1h-rZ-kgQ"/>
-                            <constraint firstItem="Ff2-l7-T28" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="U0B-kC-hnt"/>
+                            <constraint firstItem="Ff2-l7-T28" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="U0B-kC-hnt"/>
                             <constraint firstItem="Ff2-l7-T28" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="txZ-aK-bnd"/>
                         </constraints>
                     </view>
